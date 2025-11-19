@@ -1,0 +1,15 @@
+import unittest
+from process import process_data, calculate_mean
+
+class TestProcessFunctions(unittest.TestCase):
+    
+    def test_process_data(self):
+        self.assertEqual(process_data([1, 2, 3]), [2, 4, 6])
+        self.assertEqual(process_data([]), [])
+
+    def test_calculate_mean(self):
+        self.assertEqual(calculate_mean([1, 2, 3]), 2)
+        self.assertEqual(calculate_mean([]), 0)
+
+if __name__ == "__main__":
+    unittest.main()
